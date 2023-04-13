@@ -13,4 +13,4 @@ def solution(sample, threshold, significance_level):
     t_statistic = (x_bar - threshold) / (s / math.sqrt(n))
     t_critical = abs(stats.t.ppf(significance_level / 2, n - 1))
     p_value = 2 * (1 - stats.t.cdf(abs(t_statistic), n - 1))
-    return t_statistic > t_critical, p_value
+    return t_statistic > t_critical
