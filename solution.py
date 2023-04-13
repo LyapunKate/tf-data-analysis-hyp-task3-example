@@ -5,8 +5,10 @@ import numpy as np
 chat_id = 532569024
  # Ваш chat ID, не меняйте название переменной
 
-def solution(sample, threshold, significance_level):
+def solution(sample):
     import math
+    threshold = 500
+    significance_level = 0.06
     n = len(sample)
     x_bar = sum(sample) / n
     s = math.sqrt(sum((x - x_bar) ** 2 for x in sample) / (n - 1))
